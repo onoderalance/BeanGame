@@ -18,7 +18,9 @@ function scr_bean_addNew(beanName, beanShortName, beanSprite, beanDamage, beanRO
 		sprite : beanSprite,
 		damage : beanDamage,
 		ROF : beanROF,
-		Velocity : beanVelocity
+		Velocity : beanVelocity,
+		seedX : 1 + ds_list_size(global.beanList),
+		seedY : 0
 	}
 	ds_list_add(global.beanList, bean);
 }

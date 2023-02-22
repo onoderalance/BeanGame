@@ -12,15 +12,23 @@ else
 }
 
 //handles behavior checking
-if(m_player_xPos == 1 && m_player_yPos == 0)
+
+//handles seed checking
+for(var i = 0; i < ds_list_size(global.beanList); i++)
 {
-	m_player_selectActive = true;
-	m_player_selectID = 0;
-}
-else
-{
-	m_player_selectActive = false;
-	m_player_selectID = 0;
+	if(m_player_xPos == global.beanList[|i].seedX && m_player_yPos == global.beanList[|i].seedY)
+	{
+		m_player_selectActive = true;
+		m_player_selectID = 0;
+		//breaks loop if valid bean found
+		break;
+	}
+	else
+	{
+		//resets active state if nothing found
+		m_player_selectActive = false;
+		m_player_selectID = -1;
+	}
 }
 
 //handles basic player movement
