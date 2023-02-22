@@ -1,0 +1,34 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+//generate all the beans, by addingNew beans to an array
+function scr_bean_generateBeans()
+{
+	scr_bean_addNew("Green Bean", "greenbean", spr_bean, 1, 1, 2);
+}
+
+//add new bean to the array, called from main bean generation script
+function scr_bean_addNew(beanName, beanShortName, beanSprite, beanDamage, beanROF, beanVelocity)
+{
+	//definition of bean struct
+	var bean =
+	{
+		name : beanName,
+		shortName : beanShortName,
+		sprite : beanSprite,
+		damage : beanDamage,
+		ROF : beanROF,
+		Velocity : beanVelocity
+	}
+	ds_list_add(global.beanList, bean);
+}
+
+//get name of the bean from given id
+function scr_bean_getName(beanid)
+{
+}
+
+//get sprite for the selected bean from given id
+function scr_bean_getSprite(beanid)
+{
+}
