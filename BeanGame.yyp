@@ -43,7 +43,6 @@
     {"id":{"name":"obj_gameManager","path":"objects/obj_gameManager/obj_gameManager.yy",},"order":2,},
     {"id":{"name":"snd_move","path":"sounds/snd_move/snd_move.yy",},"order":0,},
     {"id":{"name":"scr_bean","path":"scripts/scr_bean/scr_bean.yy",},"order":0,},
-    {"id":{"name":"obj_beanSelector","path":"objects/obj_beanSelector/obj_beanSelector.yy",},"order":4,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":0,},
   ],
   "RoomOrderNodes": [

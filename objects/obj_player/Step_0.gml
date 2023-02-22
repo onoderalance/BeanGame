@@ -11,6 +11,18 @@ else
 	image_index = 0;
 }
 
+//handles behavior checking
+if(m_player_xPos == 1 && m_player_yPos == 0)
+{
+	m_player_selectActive = true;
+	m_player_selectID = 0;
+}
+else
+{
+	m_player_selectActive = false;
+	m_player_selectID = 0;
+}
+
 //handles basic player movement
 if(keyboard_check_pressed(m_player_KeyUp) && m_player_yPos != 0)
 {
@@ -34,6 +46,6 @@ else if(keyboard_check_pressed(m_player_KeyRight) && m_player_xPos != 9)
 }
 
 //centers player to position according to positional coordinates
-x = 16*m_player_xPos;
-y = 16*m_player_yPos;
+x = TILE_SIZE*m_player_xPos;
+y = TILE_SIZE*m_player_yPos;
 

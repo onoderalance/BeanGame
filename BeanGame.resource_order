@@ -23,6 +23,5 @@
     {"name":"obj_rat","order":1,"path":"objects/obj_rat/obj_rat.yy",},
     {"name":"spr_bean","order":3,"path":"sprites/spr_bean/spr_bean.yy",},
     {"name":"obj_gameManager","order":2,"path":"objects/obj_gameManager/obj_gameManager.yy",},
-    {"name":"obj_beanSelector","order":4,"path":"objects/obj_beanSelector/obj_beanSelector.yy",},
   ],
 }
