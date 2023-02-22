@@ -11,3 +11,6 @@ m_player_KeyLeft = ord("A");
 m_player_KeyDown = ord("S");
 m_player_KeyRight = ord("D");
 
+m_player_selectActive = false;
+m_player_selectID = -1;
+

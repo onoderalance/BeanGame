@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//handles sprite of player
+if(m_player_selectActive)
+{
+	image_index = 1;
+}
+else
+{
+	image_index = 0;
+}
+
 //handles basic player movement
 if(keyboard_check_pressed(m_player_KeyUp) && m_player_yPos != 0)
 {
