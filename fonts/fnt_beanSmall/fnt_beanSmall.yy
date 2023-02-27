@@ -1,7 +1,7 @@
 {
   "resourceType": "GMFont",
   "resourceVersion": "1.0",
-  "name": "fnt_beanName",
+  "name": "fnt_beanSmall",
   "AntiAlias": 0,
   "applyKerning": 0,
   "ascender": 6,

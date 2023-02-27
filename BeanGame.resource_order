@@ -20,8 +20,12 @@
     {"name":"spr_rat","order":2,"path":"sprites/spr_rat/spr_rat.yy",},
     {"name":"obj_bean","order":3,"path":"objects/obj_bean/obj_bean.yy",},
     {"name":"spr_background","order":1,"path":"sprites/spr_background/spr_background.yy",},
+    {"name":"fnt_beanTitle","order":1,"path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},
+    {"name":"obj_title","order":6,"path":"objects/obj_title/obj_title.yy",},
     {"name":"obj_rat","order":1,"path":"objects/obj_rat/obj_rat.yy",},
     {"name":"spr_bean","order":3,"path":"sprites/spr_bean/spr_bean.yy",},
+    {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},
     {"name":"obj_gameManager","order":2,"path":"objects/obj_gameManager/obj_gameManager.yy",},
+    {"name":"fnt_beanTitleSmall","order":2,"path":"fonts/fnt_beanTitleSmall/fnt_beanTitleSmall.yy",},
   ],
 }
