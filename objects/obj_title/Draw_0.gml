@@ -26,12 +26,6 @@ if(m_title_selection == 0)
 	//set begin to highlighted
 	beginSprite = 1;
 	beginColor = optionDefaultColor;
-	//check to change to other option
-	if(keyboard_check_pressed(m_title_down))
-	{
-		audio_play_sound(snd_move, 0, false);
-		m_title_selection = 1;
-	}
 }
 //if settings is selected
 else
@@ -39,18 +33,9 @@ else
 	//set settings to highlighted
 	settingsSprite = 1;
 	settingsColor = optionDefaultColor;
-	//check to change to other option
-	if(keyboard_check_pressed(m_title_up))
-	{
-		audio_play_sound(snd_move, 0, false);
-		m_title_selection = 0;
-	}
 }
 
-if(keyboard_check_pressed(m_title_select) && m_title_selection = 0)
-{
-	room_goto(rm_main);
-}
+
 
 //Draw select option texts
 draw_set_font(fnt_beanTitleSmall);

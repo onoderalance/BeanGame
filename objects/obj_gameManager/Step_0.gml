@@ -6,4 +6,4 @@ global.currentTick++
 if(global.currentTick >= 60)
 	global.currentTick = 0;
 	
-show_debug_message(global.currentTick);
+//show_debug_message(global.currentTick);
