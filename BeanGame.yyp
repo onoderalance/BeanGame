@@ -39,6 +39,7 @@
     {"id":{"name":"fnt_beanTitle","path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},"order":1,},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},"order":6,},
     {"id":{"name":"obj_rat","path":"objects/obj_rat/obj_rat.yy",},"order":1,},
+    {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},"order":4,},
     {"id":{"name":"spr_bean","path":"sprites/spr_bean/spr_bean.yy",},"order":3,},
     {"id":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},"order":1,},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},"order":0,},
