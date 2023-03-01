@@ -33,11 +33,13 @@
   },
   "resources": [
     {"id":{"name":"obj_beanDisplay","path":"objects/obj_beanDisplay/obj_beanDisplay.yy",},"order":5,},
+    {"id":{"name":"spr_palette","path":"sprites/spr_palette/spr_palette.yy",},"order":5,},
     {"id":{"name":"spr_rat","path":"sprites/spr_rat/spr_rat.yy",},"order":2,},
     {"id":{"name":"obj_bean","path":"objects/obj_bean/obj_bean.yy",},"order":3,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":1,},
     {"id":{"name":"fnt_beanTitle","path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},"order":1,},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},"order":6,},
+    {"id":{"name":"sh_palette","path":"shaders/sh_palette/sh_palette.yy",},"order":1,},
     {"id":{"name":"obj_rat","path":"objects/obj_rat/obj_rat.yy",},"order":1,},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},"order":4,},
     {"id":{"name":"spr_bean","path":"sprites/spr_bean/spr_bean.yy",},"order":3,},
@@ -49,6 +51,7 @@
     {"id":{"name":"snd_move","path":"sounds/snd_move/snd_move.yy",},"order":0,},
     {"id":{"name":"fnt_beanSmall","path":"fonts/fnt_beanSmall/fnt_beanSmall.yy",},"order":0,},
     {"id":{"name":"scr_bean","path":"scripts/scr_bean/scr_bean.yy",},"order":0,},
+    {"id":{"name":"shdr_palette","path":"shaders/shdr_palette/shdr_palette.yy",},"order":0,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":0,},
   ],
   "RoomOrderNodes": [
