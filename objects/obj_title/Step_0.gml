@@ -8,6 +8,8 @@ if(keyboard_check_pressed(global.controlMain))
 {
 	if(m_title_selection = 0) //if hovering start button, start
 		room_goto(rm_main);
+	else //if hovering settings, currently just toggle the palette swap
+		global.paletteSwapped = !global.paletteSwapped;
 }
 else if(keyboard_check_pressed(global.controlUp))
 {

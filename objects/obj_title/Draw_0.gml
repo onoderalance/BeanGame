@@ -1,13 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var optionHighlightColor = make_color_rgb(15, 58, 15); //color for darkest tint
-var optionMainColor = make_color_rgb(48, 98, 48); //color for main highlight
-var optionDefaultColor = make_color_rgb(139, 172, 15); //color for slight tint
-
 //Draw Main Title text
 draw_set_font(fnt_beanTitle);
-draw_set_color(optionMainColor)
+draw_set_color(COLOR_2)
 draw_set_halign(fa_center);
 draw_text(x, y-TILE_SIZE*2, "BEANRAT GAME");
 
@@ -16,8 +12,8 @@ var beginSprite = 0;
 var settingsSprite = 0;
 
 //color of button text to select
-var beginColor = optionMainColor;
-var settingsColor = optionMainColor;
+var beginColor = COLOR_2;
+var settingsColor = COLOR_2;
 
 //selection cases
 //if begin is selected
@@ -25,17 +21,15 @@ if(m_title_selection == 0)
 {
 	//set begin to highlighted
 	beginSprite = 1;
-	beginColor = optionDefaultColor;
+	beginColor = COLOR_3;
 }
 //if settings is selected
 else
 {
 	//set settings to highlighted
 	settingsSprite = 1;
-	settingsColor = optionDefaultColor;
+	settingsColor = COLOR_3;
 }
-
-
 
 //Draw select option texts
 draw_set_font(fnt_beanTitleSmall);

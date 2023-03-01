@@ -2,13 +2,23 @@
 // You can write your code in this editor
 
 //global constant definitions
+
+//size of a single "tile"
 #macro TILE_SIZE 16
+
+//colors
+#macro COLOR_1 make_color_rgb(0, 0, 0) //color for darkest tint
+#macro COLOR_2 make_color_rgb(84, 84, 84) //color for darkest tint
+#macro COLOR_3 make_color_rgb(168, 168, 168) //color for darkest tint
+#macro COLOR_4 make_color_rgb(254, 254, 254) //color for darkest tint
 
 //track control button options
 global.controlDown = ord("S");
 global.controlUp = ord("W");
 global.controlMain = vk_space;
 
+//track if palette is swapped or default
+global.paletteSwapped = false;
 
 //track current tick (60 per second)
 global.currentTick = 0;
@@ -19,7 +29,8 @@ global.beanList = ds_list_create();
 //generate beans
 scr_bean_generateBeans();
 
-//SHADER SETTINGS:
+
+//SHADER ITEMS: ----
 Color = function(r, g, b) constructor
 {
 	red = r;
@@ -41,3 +52,4 @@ sh_handle_color1 = shader_get_uniform(sh_palette, "color1");
 sh_handle_color2 = shader_get_uniform(sh_palette, "color2");
 sh_handle_color3 = shader_get_uniform(sh_palette, "color3");
 sh_handle_color4 = shader_get_uniform(sh_palette, "color4");
+
