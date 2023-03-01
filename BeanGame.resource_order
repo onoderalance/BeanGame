@@ -18,7 +18,6 @@
   "ResourceOrderSettings": [
     {"name":"obj_beanDisplay","order":5,"path":"objects/obj_beanDisplay/obj_beanDisplay.yy",},
     {"name":"spr_palette","order":5,"path":"sprites/spr_palette/spr_palette.yy",},
-    {"name":"spr_rat","order":2,"path":"sprites/spr_rat/spr_rat.yy",},
     {"name":"obj_bean","order":3,"path":"objects/obj_bean/obj_bean.yy",},
     {"name":"spr_background","order":1,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"fnt_beanTitle","order":1,"path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},
@@ -30,7 +29,6 @@
     {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},
     {"name":"obj_gameManager","order":2,"path":"objects/obj_gameManager/obj_gameManager.yy",},
     {"name":"fnt_beanTitleSmall","order":2,"path":"fonts/fnt_beanTitleSmall/fnt_beanTitleSmall.yy",},
-    {"name":"spr_ratNew","order":6,"path":"sprites/spr_ratNew/spr_ratNew.yy",},
-    {"name":"sh_paletteNew","order":2,"path":"shaders/sh_paletteNew/sh_paletteNew.yy",},
+    {"name":"spr_rat","order":6,"path":"sprites/spr_rat/spr_rat.yy",},
   ],
 }
