@@ -22,9 +22,12 @@ Color = function(r, g, b) constructor
 	}
 };
 
-colorMatch = new Color(0, 0, 0);
-colorReplace = new Color(234, 48, 255);
+color1 = new Color(15, 56, 14);
+color2 = new Color(49, 97, 47);
+color3 = new Color(135, 172, 24);
+color4 = new Color(154, 189, 14);
 
-sh_handle_range = shader_get_uniform(sh_palette, "range");
-sh_handle_match = shader_get_uniform(sh_palette, "colorMatch");
-sh_handle_replace = shader_get_uniform(sh_palette, "colorReplace");
+sh_handle_color1 = shader_get_uniform(sh_palette, "color1");
+sh_handle_color2 = shader_get_uniform(sh_palette, "color2");
+sh_handle_color3 = shader_get_uniform(sh_palette, "color3");
+sh_handle_color4 = shader_get_uniform(sh_palette, "color4");

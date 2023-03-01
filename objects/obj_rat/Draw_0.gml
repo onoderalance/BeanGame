@@ -3,18 +3,26 @@
 
 shader_set(sh_palette);
 
-shader_set_uniform_f(sh_handle_range, 1);
-shader_set_uniform_f(sh_handle_match, 
-	colorMatch.toShaderValue(colorMatch.red),
-	colorMatch.toShaderValue(colorMatch.green),
-	colorMatch.toShaderValue(colorMatch.blue)
-);
-
-shader_set_uniform_f(sh_handle_replace, 
-	colorMatch.toShaderValue(colorReplace.red),
-	colorMatch.toShaderValue(colorReplace.green),
-	colorMatch.toShaderValue(colorReplace.blue)
-);
+shader_set_uniform_f(sh_handle_color1, 
+	color1.toShaderValue(color1.red),
+	color1.toShaderValue(color1.green),
+	color1.toShaderValue(color1.blue)
+); 
+shader_set_uniform_f(sh_handle_color2, 
+	color2.toShaderValue(color2.red),
+	color2.toShaderValue(color2.green),
+	color2.toShaderValue(color2.blue)
+); 
+shader_set_uniform_f(sh_handle_color3, 
+	color3.toShaderValue(color3.red),
+	color3.toShaderValue(color3.green),
+	color3.toShaderValue(color3.blue)
+); 
+shader_set_uniform_f(sh_handle_color4, 
+	color4.toShaderValue(color4.red),
+	color4.toShaderValue(color4.green),
+	color4.toShaderValue(color4.blue)
+); 
 
 draw_self();
 
