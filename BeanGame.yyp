@@ -40,6 +40,7 @@
     {"id":{"name":"fnt_beanTitle","path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},"order":1,},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},"order":6,},
     {"id":{"name":"sh_palette","path":"shaders/sh_palette/sh_palette.yy",},"order":1,},
+    {"id":{"name":"spr_palette2","path":"sprites/spr_palette2/spr_palette2.yy",},"order":7,},
     {"id":{"name":"obj_rat","path":"objects/obj_rat/obj_rat.yy",},"order":1,},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},"order":4,},
     {"id":{"name":"spr_bean","path":"sprites/spr_bean/spr_bean.yy",},"order":3,},
@@ -51,7 +52,9 @@
     {"id":{"name":"snd_move","path":"sounds/snd_move/snd_move.yy",},"order":0,},
     {"id":{"name":"fnt_beanSmall","path":"fonts/fnt_beanSmall/fnt_beanSmall.yy",},"order":0,},
     {"id":{"name":"scr_bean","path":"scripts/scr_bean/scr_bean.yy",},"order":0,},
+    {"id":{"name":"spr_ratNew","path":"sprites/spr_ratNew/spr_ratNew.yy",},"order":6,},
     {"id":{"name":"shdr_palette","path":"shaders/shdr_palette/shdr_palette.yy",},"order":0,},
+    {"id":{"name":"sh_paletteNew","path":"shaders/sh_paletteNew/sh_paletteNew.yy",},"order":2,},
     {"id":{"name":"rm_main","path":"rooms/rm_main/rm_main.yy",},"order":0,},
   ],
   "RoomOrderNodes": [

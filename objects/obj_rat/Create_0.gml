@@ -22,7 +22,7 @@ Color = function(r, g, b) constructor
 	}
 };
 
-colorMatch = new Color(15, 56, 15);
+colorMatch = new Color(0, 0, 0);
 colorReplace = new Color(234, 48, 255);
 
 sh_handle_range = shader_get_uniform(sh_palette, "range");

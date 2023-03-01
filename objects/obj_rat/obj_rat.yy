@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_rat",
-    "path": "sprites/spr_rat/spr_rat.yy",
+    "name": "spr_ratNew",
+    "path": "sprites/spr_ratNew/spr_ratNew.yy",
   },
   "spriteMaskId": null,
   "visible": true,
