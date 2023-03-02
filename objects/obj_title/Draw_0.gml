@@ -45,3 +45,4 @@ draw_set_color(settingsColor)
 draw_sprite(spr_button, settingsSprite, x, y+TILE_SIZE);
 draw_text(x, y+4+TILE_SIZE, "Settings");
 
+
