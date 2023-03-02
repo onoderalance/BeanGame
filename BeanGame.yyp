@@ -33,7 +33,9 @@
   },
   "resources": [
     {"id":{"name":"obj_beanDisplay","path":"objects/obj_beanDisplay/obj_beanDisplay.yy",},"order":5,},
+    {"id":{"name":"spr_palette2","path":"sprites/spr_palette2/spr_palette2.yy",},"order":7,},
     {"id":{"name":"spr_palette","path":"sprites/spr_palette/spr_palette.yy",},"order":5,},
+    {"id":{"name":"sh_shader2","path":"shaders/sh_shader2/sh_shader2.yy",},"order":2,},
     {"id":{"name":"obj_bean","path":"objects/obj_bean/obj_bean.yy",},"order":3,},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},"order":1,},
     {"id":{"name":"fnt_beanTitle","path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},"order":1,},

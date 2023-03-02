@@ -29,4 +29,4 @@ else if(keyboard_check_pressed(global.controlDown))
 	}
 }
 
-show_debug_message(texture_get_texel_height(sprite_get_texture(spr_palette,0)));
+//show_debug_message(texture_get_texel_height(sprite_get_texture(spr_palette,0)));

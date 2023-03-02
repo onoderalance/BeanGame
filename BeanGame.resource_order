@@ -17,7 +17,9 @@
   ],
   "ResourceOrderSettings": [
     {"name":"obj_beanDisplay","order":5,"path":"objects/obj_beanDisplay/obj_beanDisplay.yy",},
+    {"name":"spr_palette2","order":7,"path":"sprites/spr_palette2/spr_palette2.yy",},
     {"name":"spr_palette","order":5,"path":"sprites/spr_palette/spr_palette.yy",},
+    {"name":"sh_shader2","order":2,"path":"shaders/sh_shader2/sh_shader2.yy",},
     {"name":"obj_bean","order":3,"path":"objects/obj_bean/obj_bean.yy",},
     {"name":"spr_background","order":1,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"fnt_beanTitle","order":1,"path":"fonts/fnt_beanTitle/fnt_beanTitle.yy",},

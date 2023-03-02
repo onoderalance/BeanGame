@@ -53,3 +53,9 @@ sh_handle_color2 = shader_get_uniform(sh_palette, "color2");
 sh_handle_color3 = shader_get_uniform(sh_palette, "color3");
 sh_handle_color4 = shader_get_uniform(sh_palette, "color4");
 
+
+/*
+shf_palette = shader_get_sampler_index(sh_shader2, "palette");
+shf_index = shader_get_uniform(sh_shader2, "index");
+shf_pw = shader_get_uniform(sh_shader2, "pw");
+shf_ph = shader_get_uniform(sh_shader2, "ph");*/

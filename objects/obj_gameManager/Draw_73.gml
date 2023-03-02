@@ -34,3 +34,18 @@ if(global.paletteSwapped)
 
 	surface_free(paletteSurface);
 }
+/*
+var _surf = surface_create(view_wport[0], view_hport[0]);
+surface_copy(_surf,0,0,application_surface);
+
+var _tex = sprite_get_texture(spr_palette2, 0);
+shader_set(sh_shader2);
+    texture_set_stage(shf_palette,_tex);
+    shader_set_uniform_f(shf_index,0);
+    shader_set_uniform_f(shf_pw,texture_get_texel_width(_tex));
+    shader_set_uniform_f(shf_ph,texture_get_texel_height(_tex));
+	
+   	draw_surface_ext(_surf, 0, 0, 0.2, 0.2, 0, c_white, 1);
+shader_reset();
+
+surface_free(_surf);*/
