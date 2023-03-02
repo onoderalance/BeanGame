@@ -1,69 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
-/*
-//if palette is swapper, run palette swapper over the whole surface
+
+//display as palette swawpped 
 if(global.paletteSwapped)
 {
-	var paletteSurface = surface_create(view_wport[0], view_hport[0]);
-	surface_copy(paletteSurface, 0, 0, application_surface);
+	//capture screen to a surface to draw fully swapped
+	var screen = surface_create(view_wport[0], view_hport[0]);
+	surface_copy(screen,0,0,application_surface);
+	
+	//save palette as a texture
+	var texture = sprite_get_texture(spr_palette, 0);
 
+	//set palette swapper texture
 	shader_set(sh_palette);
-		shader_set_uniform_f(sh_handle_color1, 
-			color1.toShaderValue(color1.red),
-			color1.toShaderValue(color1.green),
-			color1.toShaderValue(color1.blue)
-		); 
-		shader_set_uniform_f(sh_handle_color2, 
-			color2.toShaderValue(color2.red),
-			color2.toShaderValue(color2.green),
-			color2.toShaderValue(color2.blue)
-		); 
-		shader_set_uniform_f(sh_handle_color3, 
-			color3.toShaderValue(color3.red),
-			color3.toShaderValue(color3.green),
-			color3.toShaderValue(color3.blue)
-		); 
-		shader_set_uniform_f(sh_handle_color4, 
-			color4.toShaderValue(color4.red),
-			color4.toShaderValue(color4.green),
-			color4.toShaderValue(color4.blue)
-		); 
-	//CURRENT SCALE IS 1/5, so 0.2 scaling
-	draw_surface_ext(paletteSurface, 0, 0, 0.2, 0.2, 0, c_white, 1);
-	shader_reset();
 
-	surface_free(paletteSurface);
-}*/
-/*
-var _surf = surface_create(view_wport[0], view_hport[0]);
-surface_copy(_surf,0,0,application_surface);
-
-var _tex = sprite_get_texture(spr_palette2, 0);
-shader_set(sh_shader2);
-    texture_set_stage(shf_palette,_tex);
-    shader_set_uniform_f(shf_index,0);
-    shader_set_uniform_f(shf_pw,texture_get_texel_width(_tex));
-    shader_set_uniform_f(shf_ph,texture_get_texel_height(_tex));
+	//set shader uniforms for palette swap
+	texture_set_stage(shu_palette, texture);
+	shader_set_uniform_f(shu_index, 1); //current default to palette "1"
+	shader_set_uniform_f(shu_pw, texture_get_texel_width(texture));
+	shader_set_uniform_f(shu_ph, texture_get_texel_height(texture));
 	
-   	draw_surface_ext(_surf, 0, 0, 0.2, 0.2, 0, c_white, 1);
-shader_reset();
-
-surface_free(_surf);*/
-
-if(global.paletteSwapped)
-{
-	var _surf = surface_create(view_wport[0], view_hport[0]);
-	surface_copy(_surf,0,0,application_surface);
+	//draw surface
+	draw_surface_ext(screen, 0, 0, 0.2, 0.2, 0, c_white, 1);
+	//free surface
+	surface_free(screen);
 	
-	var _tex = sprite_get_texture(spr_palette2, 0);
-
-	shader_set(sh_shader2);
-
-	texture_set_stage(shf_palette, _tex);
-	shader_set_uniform_f(shf_index, 1);
-	shader_set_uniform_f(shf_pw, texture_get_texel_width(_tex));
-	shader_set_uniform_f(shf_ph, texture_get_texel_height(_tex));
-
-	 draw_surface_ext(_surf, 0, 0, 0.2, 0.2, 0, c_white, 1);
+	//reset the shader
 	shader_reset();
 }

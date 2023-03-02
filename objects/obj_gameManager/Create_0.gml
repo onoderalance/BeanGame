@@ -28,33 +28,9 @@ global.beanList = ds_list_create();
 
 //generate beans
 scr_bean_generateBeans();
-/*
 
-//SHADER ITEMS: ----
-Color = function(r, g, b) constructor
-{
-	red = r;
-	green = g;
-	blue = b;
-	
-	static toShaderValue = function(value)
-	{
-		return value/255;
-	}
-};
-
-color1 = new Color(15, 56, 14);
-color2 = new Color(49, 97, 47);
-color3 = new Color(135, 172, 24);
-color4 = new Color(154, 189, 14);
-
-sh_handle_color1 = shader_get_uniform(sh_palette, "color1");
-sh_handle_color2 = shader_get_uniform(sh_palette, "color2");
-sh_handle_color3 = shader_get_uniform(sh_palette, "color3");
-sh_handle_color4 = shader_get_uniform(sh_palette, "color4");
-*/
-
-shf_palette = shader_get_sampler_index(sh_shader2, "palette");
-shf_index = shader_get_uniform(sh_shader2, "palette_index");
-shf_pw = shader_get_uniform(sh_shader2, "pw");
-shf_ph = shader_get_uniform(sh_shader2, "ph");
+//Shader values: ------
+shu_palette = shader_get_sampler_index(sh_palette, "palette"); //holds texture of palette
+shu_index = shader_get_uniform(sh_palette, "palette_index"); //holds index of which palette to use
+shu_pw = shader_get_uniform(sh_palette, "pw"); //holds texel width of palette texture
+shu_ph = shader_get_uniform(sh_palette, "ph"); //holds texel height of palette texture

@@ -9,4 +9,3 @@ m_rat_stepSize = 1;
 
 //how much health the rat has
 m_rat_health = 5;
-
