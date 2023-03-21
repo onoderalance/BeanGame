@@ -5,14 +5,9 @@
 m_player_xPos = 0;
 m_player_yPos = 0;
 
-//CONTROLS: -----
-m_player_KeyUp = ord("W");
-m_player_KeyLeft = ord("A");
-m_player_KeyDown = ord("S");
-m_player_KeyRight = ord("D");
-
-m_player_selectActive = false;
-m_player_selectID = -1;
-
 //GAMEPLAY: -----
+m_player_selectActive = false; //determines if player is over a valid interactible state
+//determines what kind of action the player is able to do (-1 nothing, 0 select seed, 1 plant, 2 dig)
+m_player_selectID = -1; 
+
 m_player_seed = -1; //stores index of seed selected by player

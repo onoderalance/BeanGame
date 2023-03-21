@@ -27,27 +27,27 @@ for(var i = 0; i < ds_list_size(global.beanList); i++)
 	{
 		//resets active state if nothing found
 		m_player_selectActive = false;
-		m_player_selectID = -1;
+	//	m_player_selectID = -1;
 	}
 }
 
 //handles basic player movement
-if(keyboard_check_pressed(m_player_KeyUp) && m_player_yPos != 0)
+if(keyboard_check_pressed(global.controlUp) && m_player_yPos != 0)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_yPos--;
 }
-else if(keyboard_check_pressed(m_player_KeyLeft) && m_player_xPos != 0)
+else if(keyboard_check_pressed(global.controlLeft) && m_player_xPos != 0)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);	
 	m_player_xPos--;
 }
-else if(keyboard_check_pressed(m_player_KeyDown) && m_player_yPos != 8)
+else if(keyboard_check_pressed(global.controlDown) && m_player_yPos != 8)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_yPos++;
 }
-else if(keyboard_check_pressed(m_player_KeyRight) && m_player_xPos != 9)
+else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != 9)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_xPos++;

@@ -15,7 +15,11 @@
 //track control button options
 global.controlDown = ord("S");
 global.controlUp = ord("W");
+global.controlLeft = ord("A");
+global.controlRight = ord("D");
+
 global.controlMain = vk_space;
+global.controlAlt = vk_enter;
 
 //track if palette is swapped or default
 global.paletteSwapped = false;
