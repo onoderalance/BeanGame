@@ -4,7 +4,7 @@
 //generate all the beans, by addingNew beans to an array
 function scr_bean_generateBeans()
 {
-	scr_bean_addNew("Green Bean", "greenbean", spr_bean, 1, 1, 2);
+	scr_bean_addNew("Green Bean", "greenbean", spr_bean, 1, 1, 2); //bean 0
 }
 
 //add new bean to the array, called from main bean generation script

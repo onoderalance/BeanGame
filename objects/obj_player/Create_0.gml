@@ -14,3 +14,5 @@ m_player_KeyRight = ord("D");
 m_player_selectActive = false;
 m_player_selectID = -1;
 
+//GAMEPLAY: -----
+m_player_seed = -1; //stores index of seed selected by player
