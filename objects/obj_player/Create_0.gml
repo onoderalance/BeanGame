@@ -8,6 +8,7 @@ m_player_yPos = 0;
 //GAMEPLAY: -----
 m_player_selectActive = false; //determines if player is over a valid interactible state
 //determines what kind of action the player is able to do (-1 nothing, 0 select seed, 1 plant, 2 dig)
-m_player_selectID = -1; 
+m_player_currentState = -1; 
 
-m_player_seed = -1; //stores index of seed selected by player
+m_player_seed = -1; //stores index of seed selected by players
+m_player_seed_hover = -1; //stores index of seed hovered by the player

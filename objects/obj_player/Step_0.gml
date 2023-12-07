@@ -19,7 +19,8 @@ for(var i = 0; i < ds_list_size(global.beanList); i++)
 	if(m_player_xPos == global.beanList[|i].seedX && m_player_yPos == global.beanList[|i].seedY)
 	{
 		m_player_selectActive = true;
-		m_player_selectID = 0;
+		m_player_currentState = 0;
+		m_player_seed_hover = i;
 		//breaks loop if valid bean found
 		break;
 	}
@@ -27,6 +28,7 @@ for(var i = 0; i < ds_list_size(global.beanList); i++)
 	{
 		//resets active state if nothing found
 		m_player_selectActive = false;
+		m_player_seed_hover = -1;
 	//	m_player_selectID = -1;
 	}
 }
@@ -51,6 +53,17 @@ else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != 9)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_xPos++;
+}
+
+//handles key movement
+if(keyboard_check_pressed(global.controlMain) && m_player_selectActive)
+{
+	switch(m_player_currentState)
+	{
+		case 0:
+			m_player_seed = m_player_seed_hover;
+			break;
+	}
 }
 
 //centers player to position according to positional coordinates
