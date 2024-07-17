@@ -20,4 +20,4 @@ m_player_currentState = -1;
 m_player_interactSegment = SEGMENT.SEEDS;
 
 m_player_seed = -1; //stores index of seed selected by players
-m_player_seed_hover = -1; //stores index of seed hovered by the player
+
