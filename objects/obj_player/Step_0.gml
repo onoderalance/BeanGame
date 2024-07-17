@@ -13,24 +13,43 @@ else
 
 //handles behavior checking
 
-//handles seed checking
-for(var i = 0; i < ds_list_size(global.beanList); i++)
+//checks index of what part of the screen the player is in
+//unfinished
+if(m_player_yPos < 2 && m_player_yPos > 0)
 {
-	if(m_player_xPos == global.beanList[|i].seedX && m_player_yPos == global.beanList[|i].seedY)
-	{
-		m_player_selectActive = true;
-		m_player_currentState = 0;
-		m_player_seed_hover = i;
-		//breaks loop if valid bean found
+	m_player_interactSegment = SEGMENT.SEEDS;
+}
+else if(m_player_yPos < 7 && m_player_yPos > 1)
+{
+	m_player_interactSegment = SEGMENT.FIELD;
+}
+
+//determines player behaviour based on the segment of the screen we are in
+switch(m_player_interactSegment)
+{
+	case SEGMENT.SEEDS:
+		//handles seed checking
+		for(var i = 0; i < ds_list_size(global.beanList); i++)
+		{
+			if(m_player_xPos == global.beanList[|i].seedX && m_player_yPos == global.beanList[|i].seedY)
+			{
+				m_player_selectActive = true;
+				m_player_currentState = 0;
+				m_player_seed_hover = i;
+				//breaks loop if valid bean found
+				break;
+			}
+			else
+			{
+				//resets active state if nothing found
+				m_player_selectActive = false;
+				m_player_seed_hover = -1;
+			//	m_player_selectID = -1;
+			}
+		}
 		break;
-	}
-	else
-	{
-		//resets active state if nothing found
-		m_player_selectActive = false;
-		m_player_seed_hover = -1;
-	//	m_player_selectID = -1;
-	}
+	case SEGMENT.FIELD:
+		break;
 }
 
 //handles basic player movement
