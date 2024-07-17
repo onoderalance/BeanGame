@@ -26,7 +26,7 @@
     {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},
     {"name":"sh_palette","order":2,"path":"shaders/sh_palette/sh_palette.yy",},
     {"name":"spr_background","order":1,"path":"sprites/spr_background/spr_background.yy",},
-    {"name":"spr_bean","order":3,"path":"sprites/spr_bean/spr_bean.yy",},
+    {"name":"spr_bean_green","order":3,"path":"sprites/spr_bean_green/spr_bean_green.yy",},
     {"name":"spr_button","order":4,"path":"sprites/spr_button/spr_button.yy",},
     {"name":"spr_palette","order":7,"path":"sprites/spr_palette/spr_palette.yy",},
     {"name":"spr_rat","order":6,"path":"sprites/spr_rat/spr_rat.yy",},

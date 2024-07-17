@@ -48,7 +48,7 @@
     {"id":{"name":"sh_palette","path":"shaders/sh_palette/sh_palette.yy",},},
     {"id":{"name":"snd_move","path":"sounds/snd_move/snd_move.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
-    {"id":{"name":"spr_bean","path":"sprites/spr_bean/spr_bean.yy",},},
+    {"id":{"name":"spr_bean_green","path":"sprites/spr_bean_green/spr_bean_green.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
     {"id":{"name":"spr_palette","path":"sprites/spr_palette/spr_palette.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
