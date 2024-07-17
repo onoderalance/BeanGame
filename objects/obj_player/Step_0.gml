@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//centers player to position according to positional coordinates
+x = TILE_SIZE*m_player_xPos;
+y = TILE_SIZE*m_player_yPos;
+
 //handles sprite of player
 if(m_player_selectActive)
 {
@@ -11,17 +15,46 @@ else
 	image_index = 0;
 }
 
+
+//handles basic player movement
+if(keyboard_check_pressed(global.controlUp) && m_player_yPos != 0)
+{
+	audio_play_sound(snd_move, 0, false, 1, 0, 1);
+	m_player_yPos--;
+}
+else if(keyboard_check_pressed(global.controlLeft) && m_player_xPos != 0)
+{
+	audio_play_sound(snd_move, 0, false, 1, 0, 1);	
+	m_player_xPos--;
+}
+else if(keyboard_check_pressed(global.controlDown) && m_player_yPos != 8)
+{
+	audio_play_sound(snd_move, 0, false, 1, 0, 1);
+	m_player_yPos++;
+}
+else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != 9)
+{
+	audio_play_sound(snd_move, 0, false, 1, 0, 1);
+	m_player_xPos++;
+}
+
+
+
 //handles behavior checking
 
 //checks index of what part of the screen the player is in
 //unfinished
-if(m_player_yPos < 2 && m_player_yPos > 0)
+if(m_player_yPos >= 0 && m_player_yPos < 2) //seed selection
 {
 	m_player_interactSegment = SEGMENT.SEEDS;
 }
-else if(m_player_yPos < 7 && m_player_yPos > 1)
+else if(m_player_yPos > 1 && m_player_yPos < 7) //plantable field
 {
 	m_player_interactSegment = SEGMENT.FIELD;
+}
+else //everything else
+{
+	m_player_interactSegment = SEGMENT.NONE;
 }
 
 //determines player behaviour based on the segment of the screen we are in
@@ -51,6 +84,13 @@ switch(m_player_interactSegment)
 		}
 		break;
 	case SEGMENT.FIELD:
+		if(m_player_seed != -1)//can plant
+			m_player_selectActive = true;
+		else //cant plant
+			m_player_selectActive = false;
+		break;
+	case SEGMENT.NONE: //nothing interactable
+		m_player_selectActive = false;
 		break;
 }
 
@@ -66,30 +106,3 @@ if(keyboard_check_pressed(global.controlMain))
 			break;
 	}
 }
-
-//handles basic player movement
-if(keyboard_check_pressed(global.controlUp) && m_player_yPos != 0)
-{
-	audio_play_sound(snd_move, 0, false, 1, 0, 1);
-	m_player_yPos--;
-}
-else if(keyboard_check_pressed(global.controlLeft) && m_player_xPos != 0)
-{
-	audio_play_sound(snd_move, 0, false, 1, 0, 1);	
-	m_player_xPos--;
-}
-else if(keyboard_check_pressed(global.controlDown) && m_player_yPos != 8)
-{
-	audio_play_sound(snd_move, 0, false, 1, 0, 1);
-	m_player_yPos++;
-}
-else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != 9)
-{
-	audio_play_sound(snd_move, 0, false, 1, 0, 1);
-	m_player_xPos++;
-}
-
-//centers player to position according to positional coordinates
-x = TILE_SIZE*m_player_xPos;
-y = TILE_SIZE*m_player_yPos;
-

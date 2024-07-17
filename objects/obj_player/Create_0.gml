@@ -5,7 +5,8 @@ enum SEGMENT
 {
 	SEEDS,
 	BUTTONS,
-	FIELD
+	FIELD,
+	NONE
 }
 
 //these vars store corresponding 16x16 "coordinates"
