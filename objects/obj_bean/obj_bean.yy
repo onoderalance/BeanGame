@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_bean_lima",
-    "path":"sprites/spr_bean_lima/spr_bean_lima.yy",
+    "name":"spr_bean_green",
+    "path":"sprites/spr_bean_green/spr_bean_green.yy",
   },
   "spriteMaskId":null,
   "visible":true,

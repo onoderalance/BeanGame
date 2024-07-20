@@ -104,5 +104,12 @@ if(keyboard_check_pressed(global.controlMain))
 			if(_tempseed != -1) 
 				m_player_seed = _tempseed;
 			break;
+		case SEGMENT.FIELD: //handles planting
+			if(m_player_seed != -1) //can plant
+			{
+				var _newbean = instance_create_depth(x, y, depth, obj_bean);
+			}
+			break;
+			
 	}
 }
