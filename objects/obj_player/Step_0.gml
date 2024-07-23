@@ -73,6 +73,7 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 		else //cant plant
 			m_player_selectActive = false;
 		break;
+	case GRIDTILE.PLOTFULL: //if the plot is taken by a seed already
 	case GRIDTILE.NONE: //nothing interactable
 		m_player_selectActive = false;
 		break;
@@ -91,6 +92,8 @@ if(keyboard_check_pressed(global.controlMain))
 		case GRIDTILE.PLOTEMPTY: //handles planting
 			if(m_player_seed != -1) //can plant
 			{
+				//mark tile as taken
+				scr_grid_updatePlot(m_player_xPos, m_player_yPos, GRIDTILE.PLOTFULL)
 				var _newbean = instance_create_depth(x, y, depth, obj_bean);
 				_newbean.m_bean_type = m_player_seed; //set type
 				_newbean.sprite_index = global.beanList[|m_player_seed].sprite;　//set sprite
