@@ -6,6 +6,10 @@
 //size of a single "tile"
 #macro TILE_SIZE 16
 
+//grid dimensions
+#macro GRID_WIDTH 8
+#macro GRID_HEIGHT 9
+
 //colors
 #macro COLOR_1 make_color_rgb(0, 0, 0) //color for darkest tint
 #macro COLOR_2 make_color_rgb(84, 84, 84) //color for darkest tint
@@ -32,6 +36,10 @@ global.beanList = ds_list_create();
 
 //generate beans
 scr_bean_generateBeans();
+
+//generate grid
+global.grid = -1;
+
 
 //Shader values: ------
 shu_palette = shader_get_sampler_index(sh_palette, "palette"); //holds texture of palette
