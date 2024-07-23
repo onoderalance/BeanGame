@@ -16,6 +16,15 @@
 #macro COLOR_3 make_color_rgb(168, 168, 168) //color for darkest tint
 #macro COLOR_4 make_color_rgb(254, 254, 254) //color for darkest tint
 
+//enum for grid roles
+enum GRIDTILE
+{
+	NONE,
+	SEED,
+	PLOTEMPTY,
+	PLOTFULL
+}
+
 //track control button options
 global.controlDown = ord("S");
 global.controlUp = ord("W");
@@ -38,7 +47,8 @@ global.beanList = ds_list_create();
 scr_bean_generateBeans();
 
 //generate grid
-global.grid = -1;
+global.grid[GRID_WIDTH,GRID_HEIGHT] = -1;
+scr_grid_generate(global.grid)
 
 
 //Shader values: ------

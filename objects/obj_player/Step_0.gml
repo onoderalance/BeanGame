@@ -44,6 +44,7 @@ else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != GRID_HEI
 
 //checks index of what part of the screen the player is in
 //unfinished
+/*
 if(m_player_yPos >= 0 && m_player_yPos < 2) //seed selection
 {
 	m_player_interactSegment = SEGMENT.SEEDS;
@@ -55,12 +56,12 @@ else if(m_player_yPos > 1 && m_player_yPos < 7) //plantable field
 else //everything else
 {
 	m_player_interactSegment = SEGMENT.NONE;
-}
+}*/
 
 //determines player behaviour based on the segment of the screen we are in
-switch(m_player_interactSegment)
+switch(global.grid[m_player_xPos,m_player_yPos])
 {
-	case SEGMENT.SEEDS:
+	case GRIDTILE.SEED:
 		//handles seed checking
 		//gets seed hovered by the player
 		var _tempseed = -1; //stores index of seed hovered by the player
@@ -83,13 +84,13 @@ switch(m_player_interactSegment)
 			}
 		}
 		break;
-	case SEGMENT.FIELD:
+	case GRIDTILE.PLOTEMPTY:
 		if(m_player_seed != -1)//can plant
 			m_player_selectActive = true;
 		else //cant plant
 			m_player_selectActive = false;
 		break;
-	case SEGMENT.NONE: //nothing interactable
+	case GRIDTILE.NONE: //nothing interactable
 		m_player_selectActive = false;
 		break;
 }
@@ -97,14 +98,14 @@ switch(m_player_interactSegment)
 //handles input main
 if(keyboard_check_pressed(global.controlMain))
 {
-	switch(m_player_interactSegment)
+	switch(global.grid[m_player_xPos,m_player_yPos])
 	{
-		case SEGMENT.SEEDS:
+		case GRIDTILE.SEED:
 		// as long as a valid seed is chosen, that will be the new seed
 			if(_tempseed != -1) 
 				m_player_seed = _tempseed;
 			break;
-		case SEGMENT.FIELD: //handles planting
+		case GRIDTILE.PLOTEMPTY: //handles planting
 			if(m_player_seed != -1) //can plant
 			{
 				var _newbean = instance_create_depth(x, y, depth, obj_bean);
