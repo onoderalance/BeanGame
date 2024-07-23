@@ -47,9 +47,8 @@ global.beanList = ds_list_create();
 scr_bean_generateBeans();
 
 //generate grid
-global.grid[GRID_WIDTH,GRID_HEIGHT] = -1;
-scr_grid_generate(global.grid)
-
+global.grid[GRID_WIDTH,GRID_HEIGHT] = -1; //init
+scr_grid_generate(global.grid); //populate
 
 //Shader values: ------
 shu_palette = shader_get_sampler_index(sh_palette, "palette"); //holds texture of palette

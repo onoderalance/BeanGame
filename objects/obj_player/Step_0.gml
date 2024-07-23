@@ -39,24 +39,7 @@ else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != GRID_HEI
 }
 
 
-
 //handles behavior checking
-
-//checks index of what part of the screen the player is in
-//unfinished
-/*
-if(m_player_yPos >= 0 && m_player_yPos < 2) //seed selection
-{
-	m_player_interactSegment = SEGMENT.SEEDS;
-}
-else if(m_player_yPos > 1 && m_player_yPos < 7) //plantable field
-{
-	m_player_interactSegment = SEGMENT.FIELD;
-}
-else //everything else
-{
-	m_player_interactSegment = SEGMENT.NONE;
-}*/
 
 //determines player behaviour based on the segment of the screen we are in
 switch(global.grid[m_player_xPos,m_player_yPos])
@@ -113,6 +96,5 @@ if(keyboard_check_pressed(global.controlMain))
 				_newbean.sprite_index = global.beanList[|m_player_seed].sprite;　//set sprite
 			}
 			break;
-			
 	}
 }
