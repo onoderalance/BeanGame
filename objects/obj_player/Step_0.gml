@@ -1,21 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//centers player to position according to positional coordinates
-x = TILE_SIZE*m_player_xPos;
-y = TILE_SIZE*m_player_yPos;
-
-//handles sprite of player
-if(m_player_selectActive)
-{
-	image_index = 1;
-}
-else
-{
-	image_index = 0;
-}
-
-
 //handles basic player movement
 if(keyboard_check_pressed(global.controlUp) && m_player_yPos != 0)
 {
@@ -38,6 +23,9 @@ else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != GRID_HEI
 	m_player_xPos++;
 }
 
+//centers player to position according to positional coordinates
+x = TILE_SIZE*m_player_xPos;
+y = TILE_SIZE*m_player_yPos;
 
 //handles behavior checking
 
