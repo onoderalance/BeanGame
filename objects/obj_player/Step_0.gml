@@ -75,7 +75,11 @@ if(keyboard_check_pressed(global.controlMain))
 		case GRIDTILE.SEED:
 		// as long as a valid seed is chosen, that will be the new seed
 			if(_tempseed != -1) 
-				m_player_seed = _tempseed;
+				//if same seed has been chosen, deselect current seed
+				if(_tempseed == m_player_seed)
+					m_player_seed = -1;
+				else
+					m_player_seed = _tempseed;
 			break;
 		case GRIDTILE.PLOTEMPTY: //handles planting
 			if(m_player_seed != -1) //can plant
