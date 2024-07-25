@@ -10,7 +10,7 @@ function scr_grid_generate(array)
 		{
 			if(_i < 6 && _j < 2)//case for seeds
 				array[_i,_j] = GRIDTILE.SEED;
-			else if(_i > 0 && _i < 8 && _j < 7)
+			else if(_i > 0 && _i < 9 && _j < 7)
 				array[_i,_j] = GRIDTILE.PLOTEMPTY;
 			else
 				array[_i,_j] = GRIDTILE.NONE; //else initialize to nothing

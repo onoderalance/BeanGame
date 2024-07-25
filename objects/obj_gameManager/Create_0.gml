@@ -7,7 +7,7 @@
 #macro TILE_SIZE 16
 
 //grid dimensions
-#macro GRID_WIDTH 8
+#macro GRID_WIDTH 10
 #macro GRID_HEIGHT 9
 
 //colors
