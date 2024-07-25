@@ -91,6 +91,8 @@ if(keyboard_check_pressed(global.controlMain))
 				{
 					//mark tile as taken
 					global.money -= global.beanList[|m_player_seed].cost;
+					show_debug_message(global.money);
+					show_debug_message(global.beanList[|m_player_seed].cost);
 					scr_grid_updatePlot(m_player_xPos, m_player_yPos, GRIDTILE.PLOTFULL)
 					var _newbean = instance_create_depth(x, y, depth, obj_bean);
 					_newbean.m_bean_type = m_player_seed; //set type

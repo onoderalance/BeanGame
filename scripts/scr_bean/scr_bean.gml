@@ -9,7 +9,7 @@ function scr_bean_generateBeans()
 }
 
 //add new bean to the array, called from main bean generation script
-function scr_bean_addNew(beanName, beanShortName, beanSprite, beanDamage, beanROF, beanVelocity)
+function scr_bean_addNew(beanName, beanShortName, beanSprite, beanCost, beanDamage, beanROF, beanVelocity)
 {
 	//definition of bean struct
 	var bean =
@@ -17,7 +17,7 @@ function scr_bean_addNew(beanName, beanShortName, beanSprite, beanDamage, beanRO
 		name : beanName,
 		shortName : beanShortName,
 		sprite : beanSprite,
-		cost : 0,
+		cost : beanCost,
 		damage : beanDamage,
 		ROF : beanROF,
 		Velocity : beanVelocity,
