@@ -21,6 +21,7 @@
     {"name":"obj_bean","order":3,"path":"objects/obj_bean/obj_bean.yy",},
     {"name":"obj_beanDisplay","order":5,"path":"objects/obj_beanDisplay/obj_beanDisplay.yy",},
     {"name":"obj_gameManager","order":2,"path":"objects/obj_gameManager/obj_gameManager.yy",},
+    {"name":"obj_moneyDisplay","order":7,"path":"objects/obj_moneyDisplay/obj_moneyDisplay.yy",},
     {"name":"obj_rat","order":1,"path":"objects/obj_rat/obj_rat.yy",},
     {"name":"obj_title","order":6,"path":"objects/obj_title/obj_title.yy",},
     {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},

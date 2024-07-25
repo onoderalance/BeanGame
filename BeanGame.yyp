@@ -39,6 +39,7 @@
     {"id":{"name":"obj_bean","path":"objects/obj_bean/obj_bean.yy",},},
     {"id":{"name":"obj_beanDisplay","path":"objects/obj_beanDisplay/obj_beanDisplay.yy",},},
     {"id":{"name":"obj_gameManager","path":"objects/obj_gameManager/obj_gameManager.yy",},},
+    {"id":{"name":"obj_moneyDisplay","path":"objects/obj_moneyDisplay/obj_moneyDisplay.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_rat","path":"objects/obj_rat/obj_rat.yy",},},
     {"id":{"name":"obj_title","path":"objects/obj_title/obj_title.yy",},},

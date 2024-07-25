@@ -40,6 +40,9 @@ global.paletteSwapped = false;
 //track current tick (60 per second)
 global.currentTick = 0;
 
+//stores money
+global.money = 200;
+
 //create empty list for all beans
 global.beanList = ds_list_create();	
 

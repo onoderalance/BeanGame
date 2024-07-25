@@ -11,4 +11,3 @@ m_player_selectActive = false; //determines if player is over a valid interactib
 m_player_currentState = -1; 
 
 m_player_seed = -1; //stores index of seed selected by players
-
