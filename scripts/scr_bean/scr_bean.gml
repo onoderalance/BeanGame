@@ -4,8 +4,8 @@
 //generate all the beans, by addingNew beans to an array
 function scr_bean_generateBeans()
 {
-	scr_bean_addNew("Green Bean", "green", spr_bean_green, 1, 1, 2); //bean 0
-	scr_bean_addNew("Lima Bean", "lima", spr_bean_lima, 1, 1, 2); //bean 1
+	scr_bean_addNew("Green Bean", "green", spr_bean_green, 25, 1, 1, 2); //bean 0
+	scr_bean_addNew("Lima Bean", "lima", spr_bean_lima, 10, 1, 1, 2); //bean 1
 }
 
 //add new bean to the array, called from main bean generation script
@@ -17,6 +17,7 @@ function scr_bean_addNew(beanName, beanShortName, beanSprite, beanDamage, beanRO
 		name : beanName,
 		shortName : beanShortName,
 		sprite : beanSprite,
+		cost : 0,
 		damage : beanDamage,
 		ROF : beanROF,
 		Velocity : beanVelocity,
