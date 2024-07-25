@@ -56,7 +56,7 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 		}
 		break;
 	case GRIDTILE.PLOTEMPTY:
-		if(m_player_seed != -1)//can plant
+		if(m_player_seed != -1 && global.money >= global.beanList[|m_player_seed].cost)//can plant
 			m_player_selectActive = true;
 		else //cant plant
 			m_player_selectActive = false;
@@ -91,8 +91,6 @@ if(keyboard_check_pressed(global.controlMain))
 				{
 					//mark tile as taken
 					global.money -= global.beanList[|m_player_seed].cost;
-					show_debug_message(global.money);
-					show_debug_message(global.beanList[|m_player_seed].cost);
 					scr_grid_updatePlot(m_player_xPos, m_player_yPos, GRIDTILE.PLOTFULL)
 					var _newbean = instance_create_depth(x, y, depth, obj_bean);
 					_newbean.m_bean_type = m_player_seed; //set type
