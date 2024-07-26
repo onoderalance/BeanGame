@@ -95,6 +95,7 @@ if(keyboard_check_pressed(global.controlMain))
 					var _newbean = instance_create_depth(x, y, depth, obj_bean);
 					_newbean.m_bean_type = m_player_seed; //set type
 					_newbean.sprite_index = global.beanList[|m_player_seed].sprite; //set sprite
+					_newbean.m_bean_timeToShot = global.beanList[|m_player_seed].ROF; //initialize timer
 				}
 				else
 				{
