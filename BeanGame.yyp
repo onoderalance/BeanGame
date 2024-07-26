@@ -52,6 +52,7 @@
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_bean_green","path":"sprites/spr_bean_green/spr_bean_green.yy",},},
     {"id":{"name":"spr_bean_lima","path":"sprites/spr_bean_lima/spr_bean_lima.yy",},},
+    {"id":{"name":"spr_bean_money","path":"sprites/spr_bean_money/spr_bean_money.yy",},},
     {"id":{"name":"spr_button","path":"sprites/spr_button/spr_button.yy",},},
     {"id":{"name":"spr_palette","path":"sprites/spr_palette/spr_palette.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
