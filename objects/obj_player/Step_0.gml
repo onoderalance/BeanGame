@@ -54,19 +54,48 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 			//	m_player_selectID = -1;
 			}
 		}
+		//check for interaction
+		if(keyboard_check_pressed(global.controlMain))
+		{
+			// as long as a valid seed is chosen, that will be the new seed
+			if(_tempseed != -1) 
+			{
+				//if same seed has been chosen, deselect current seed
+				if(_tempseed == m_player_seed)
+					m_player_seed = -1;
+				else //otherwise, set seed to new seed
+					m_player_seed = _tempseed;
+			}
+		}
 		break;
 	case GRIDTILE.PLOTEMPTY:
 		if(m_player_seed != -1 && global.money >= global.beanList[|m_player_seed].cost)//can plant
+		{
 			m_player_selectActive = true;
-		else //cant plant
+			//can plant
+			//if can afford to plant
+			if(keyboard_check_pressed(global.controlMain))
+			{
+				//mark tile as taken
+				global.money -= global.beanList[|m_player_seed].cost;
+				scr_grid_updatePlot(m_player_xPos, m_player_yPos, GRIDTILE.PLOTFULL)
+				var _newbean = instance_create_depth(x, y, depth, obj_bean);
+				_newbean.m_bean_type = m_player_seed; //set type
+				_newbean.sprite_index = global.beanList[|m_player_seed].sprite; //set sprite
+				_newbean.m_bean_timeToShot = global.beanList[|m_player_seed].ROF; //initialize timer
+			}
+		}
+		else //cant plant, play dissapointed sound or somethign
+		{
 			m_player_selectActive = false;
+		}
 		break;
 	case GRIDTILE.PLOTFULL: //if the plot is taken by a seed already
 	case GRIDTILE.NONE: //nothing interactable
 		m_player_selectActive = false;
 		break;
 }
-
+/*
 //handles input main
 if(keyboard_check_pressed(global.controlMain))
 {
