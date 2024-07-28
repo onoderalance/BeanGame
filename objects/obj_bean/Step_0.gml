@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //store bean in an easily accessed pointer
-var _currBean = global.beanList[|m_bean_type]
+var _currBean = global.beanList[m_bean_type]
 
 //when timer is at 0, shoot 
 if(m_bean_timeToShot <= 0)

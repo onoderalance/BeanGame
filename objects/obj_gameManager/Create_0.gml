@@ -16,6 +16,9 @@
 #macro COLOR_3 make_color_rgb(168, 168, 168) //color for darkest tint
 #macro COLOR_4 make_color_rgb(254, 254, 254) //color for darkest tint
 
+//max amount of possible beans that can be generated
+#macro NUM_BEANS 12
+
 //enum for grid roles
 enum GRIDTILE
 {
@@ -43,8 +46,10 @@ global.currentTick = 0;
 //stores money
 global.money = 200;
 
-//create empty list for all beans
-global.beanList = ds_list_create();	
+//create empty array for all beans
+global.beanList = array_create(NUM_BEANS);
+//keep track of how many kinds of beans have been generated
+global.beanCount = 0;
 
 //generate beans
 scr_bean_generateBeans();

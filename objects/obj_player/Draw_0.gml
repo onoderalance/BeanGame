@@ -16,5 +16,5 @@ draw_self()
 if(global.grid[m_player_xPos,m_player_yPos] == GRIDTILE.PLOTEMPTY)
 {
 	if(m_player_seed != -1)
-		draw_sprite(global.beanList[|m_player_seed].sprite,1,x,y)
+		draw_sprite(global.beanList[m_player_seed].sprite,1,x,y)
 }

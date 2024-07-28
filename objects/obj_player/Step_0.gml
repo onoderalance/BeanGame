@@ -36,9 +36,9 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 		//handles seed checking
 		//gets seed hovered by the player
 		var _tempseed = -1; //stores index of seed hovered by the player
-		for(var i = 0; i < ds_list_size(global.beanList); i++)
+		for(var i = 0; i < global.beanCount; i++)
 		{
-			if(m_player_xPos == global.beanList[|i].seedX && m_player_yPos == global.beanList[|i].seedY)
+			if(m_player_xPos == global.beanList[i].seedX && m_player_yPos == global.beanList[i].seedY)
 			{
 				m_player_selectActive = true;
 				m_player_currentState = 0;
@@ -69,7 +69,7 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 		}
 		break;
 	case GRIDTILE.PLOTEMPTY:
-		if(m_player_seed != -1 && global.money >= global.beanList[|m_player_seed].cost)//can plant
+		if(m_player_seed != -1 && global.money >= global.beanList[m_player_seed].cost)//can plant
 		{
 			m_player_selectActive = true;
 			//can plant
@@ -77,12 +77,12 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 			if(keyboard_check_pressed(global.controlMain))
 			{
 				//mark tile as taken
-				global.money -= global.beanList[|m_player_seed].cost;
+				global.money -= global.beanList[m_player_seed].cost;
 				scr_grid_updatePlot(m_player_xPos, m_player_yPos, GRIDTILE.PLOTFULL)
 				var _newbean = instance_create_depth(x, y, depth, obj_bean);
 				_newbean.m_bean_type = m_player_seed; //set type
-				_newbean.sprite_index = global.beanList[|m_player_seed].sprite; //set sprite
-				_newbean.m_bean_timeToShot = global.beanList[|m_player_seed].ROF; //initialize timer
+				_newbean.sprite_index = global.beanList[m_player_seed].sprite; //set sprite
+				_newbean.m_bean_timeToShot = global.beanList[m_player_seed].ROF; //initialize timer
 			}
 		}
 		else //cant plant, play dissapointed sound or somethign

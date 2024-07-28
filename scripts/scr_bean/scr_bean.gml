@@ -4,9 +4,10 @@
 //generate all the beans, by addingNew beans to an array
 function scr_bean_generateBeans()
 {
+	var _beanCount = 0;
 	scr_bean_addNew("Money Bean", "money", spr_bean_money, 25, 10, 5*room_speed, 2); //bean 0
 	scr_bean_addNew("Green Bean", "green", spr_bean_green, 25, 1, 1, 2); //bean 1
-	scr_bean_addNew("Lima Bean", "lima", spr_bean_lima, 10, 1, 1, 2); //bean 2
+	scr_bean_addNew( "Lima Bean", "lima", spr_bean_lima, 10, 1, 1, 2); //bean 2
 }
 
 //add new bean to the array, called from main bean generation script
@@ -22,10 +23,11 @@ function scr_bean_addNew(beanName, beanShortName, beanSprite, beanCost, beanDama
 		damage : beanDamage,
 		ROF : beanROF,
 		Velocity : beanVelocity,
-		seedX : 1 + ds_list_size(global.beanList),
+		seedX : 1 + global.beanCount,
 		seedY : 0
 	}
-	ds_list_add(global.beanList, bean);
+	global.beanList[global.beanCount] = bean;
+	global.beanCount++
 }
 
 //get name of the bean from given id
