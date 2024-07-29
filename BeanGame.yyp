@@ -57,6 +57,7 @@
     {"id":{"name":"spr_palette","path":"sprites/spr_palette/spr_palette.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_rat","path":"sprites/spr_rat/spr_rat.yy",},},
+    {"id":{"name":"spr_unable","path":"sprites/spr_unable/spr_unable.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

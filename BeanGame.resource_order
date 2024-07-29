@@ -34,5 +34,6 @@
     {"name":"spr_button","order":4,"path":"sprites/spr_button/spr_button.yy",},
     {"name":"spr_palette","order":7,"path":"sprites/spr_palette/spr_palette.yy",},
     {"name":"spr_rat","order":6,"path":"sprites/spr_rat/spr_rat.yy",},
+    {"name":"spr_unable","order":10,"path":"sprites/spr_unable/spr_unable.yy",},
   ],
 }
