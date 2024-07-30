@@ -6,8 +6,8 @@ function scr_bean_generateBeans()
 {
 	var _beanCount = 0;
 	scr_bean_addNew("Money Bean", "money", spr_bean_money, 25, 10, 5*room_speed, 2); //bean 0
-	scr_bean_addNew("Green Bean", "green", spr_bean_green, 25, 1, 1, 2); //bean 1
-	scr_bean_addNew( "Lima Bean", "lima", spr_bean_lima, 10, 1, 1, 2); //bean 2
+	scr_bean_addNew("Green Bean", "green", spr_bean_green, 25, 2, 2*room_speed, 5); //bean 1
+	scr_bean_addNew( "Lima Bean", "lima", spr_bean_lima, 10, 3, 1, 5); //bean 2
 }
 
 //add new bean to the array, called from main bean generation script
@@ -22,9 +22,10 @@ function scr_bean_addNew(beanName, beanShortName, beanSprite, beanCost, beanDama
 		cost : beanCost,
 		damage : beanDamage,
 		ROF : beanROF,
-		Velocity : beanVelocity,
+		velocity : beanVelocity,
 		seedX : 1 + global.beanCount,
-		seedY : 0
+		seedY : 0,
+		proSprite : spr_projectile
 	}
 	global.beanList[global.beanCount] = bean;
 	global.beanCount++
