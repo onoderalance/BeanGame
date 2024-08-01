@@ -22,7 +22,7 @@ moveX = function(amount)
         var _sign = sign(_move);
         while (_move != 0)
         {
-            if (!instance_place(x + _sign, y, obj_collisionTest))
+            if (!instance_place(x + _sign, y, obj_collision))
             {
                 // There is no Solid immediately beside us
                 x += _sign;

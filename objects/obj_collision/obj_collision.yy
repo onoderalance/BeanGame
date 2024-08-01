@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_collisionTest",
+  "%Name":"obj_collision",
   "eventList":[],
   "managed":true,
-  "name":"obj_collisionTest",
+  "name":"obj_collision",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_collisionTest",
-    "path":"sprites/spr_collisionTest/spr_collisionTest.yy",
+    "name":"spr_collision",
+    "path":"sprites/spr_collision/spr_collision.yy",
   },
   "spriteMaskId":null,
   "visible":true,
