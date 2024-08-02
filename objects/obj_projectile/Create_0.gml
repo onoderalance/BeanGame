@@ -15,7 +15,7 @@ xRemainder = 0;
 moveX = function(amount)
 {
 	xRemainder += amount;
-    var _move = round(xRemainder);
+    var _move = floor(xRemainder);
     if (_move != 0)
     {
         xRemainder -= _move;

@@ -17,7 +17,7 @@ if(m_bean_timeToShot <= 0)
 		scr_projectileGen(x, y, _currBean.proSprite, _currBean.velocity, _currBean.damage)
 	}
 	//reset shot clock
-	m_bean_timeToShot = _currBean.ROF; 
+	m_bean_timeToShot = irandom_range(_currBean.ROF - 1, _currBean.ROF + 1);
 }
 else
 {
