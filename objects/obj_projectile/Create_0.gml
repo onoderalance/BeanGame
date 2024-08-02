@@ -3,7 +3,6 @@
 
 //how many pixels it will move per second
 m_proVel = -1;
-
 //how many pixels it will move in one step
 //m_rat_stepSize = 1;
 
@@ -11,6 +10,7 @@ m_proVel = -1;
 m_proDamage = -1;
 
 xRemainder = 0;
+
 //define script for movement with collision checking
 moveX = function(amount)
 {

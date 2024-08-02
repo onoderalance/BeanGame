@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//move one step
-if(global.currentTick%2 == 0)
-	moveX(m_proVel);
+//move one step, smooth movement with delta time
+moveX(m_proVel * (delta_time / 1000000));
 

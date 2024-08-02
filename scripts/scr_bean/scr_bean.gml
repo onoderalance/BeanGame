@@ -5,7 +5,7 @@
 function scr_bean_generateBeans()
 {
 	scr_bean_addNew("Money Bean", "money", spr_bean_money, 25, 10, 5*room_speed, 10); //bean 0
-	scr_bean_addNew("Green Bean", "green", spr_bean_green, 25, 2, 2*room_speed, 3); //bean 1
+	scr_bean_addNew("Green Bean", "green", spr_bean_green, 25, 2, 2*room_speed, 16); //bean 1
 	scr_bean_addNew( "Lima Bean", "lima", spr_bean_lima, 10, 3, 1, 5); //bean 2
 }
 
