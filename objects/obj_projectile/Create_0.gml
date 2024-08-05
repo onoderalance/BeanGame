@@ -22,7 +22,9 @@ moveX = function(amount)
         var _sign = sign(_move);
         while (_move != 0)
         {
-            if (!instance_place(x + _sign, y, obj_collision))
+			//store instance being collided with
+			var _inst = instance_place(x + _sign, y, obj_collision)
+            if (!_inst)
             {
                 // There is no Solid immediately beside us
                 x += _sign;
@@ -32,6 +34,9 @@ moveX = function(amount)
             {
                 // Hit a solid!
                 show_debug_message("proj dead");
+				//check collision type
+				if(_inst.object_index == obj_rat)
+					_inst.m_rat_health -= m_proDamage;
 				instance_destroy();
                 break;
             }
