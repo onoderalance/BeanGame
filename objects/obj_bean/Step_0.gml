@@ -12,7 +12,7 @@ if(m_bean_timeToShot <= 0)
 	{
 		global.money += _currBean.cost;
 	}
-	else //case for other beans
+	else //case for other beans, shoot a projectile
 	{
 		scr_projectileGen(x, y, _currBean.proSprite, _currBean.velocity, _currBean.damage)
 	}
