@@ -22,6 +22,4 @@ else if(obj_player.m_player_seed == -2) //case for dig
 		COLOR_1, COLOR_1, COLOR_1, COLOR_1, 1);
 }
 
-//otherwise, draw other pertinent information
-//if(obj_player.m_player_currentState == 2) //draw 
 	

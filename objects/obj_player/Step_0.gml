@@ -56,7 +56,7 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 			if(m_player_xPos == global.beanList[i].seedX && m_player_yPos == global.beanList[i].seedY)
 			{
 				m_player_selectActive = true;
-				m_player_currentState = 0;
+				//m_player_currentState = 0;
 				_tempseed = i;
 				//breaks loop if valid bean found
 				break;
