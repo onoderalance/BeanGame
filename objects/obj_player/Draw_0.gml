@@ -15,7 +15,7 @@ draw_self()
 //explicit draw of potential bean
 if(global.grid[m_player_xPos,m_player_yPos] == GRIDTILE.PLOTEMPTY)
 {
-	if(m_player_seed != -1) //bean has been selected by player
+	if(m_player_seed > -1) //bean has been selected by player
 	{
 		//draw the hollow bean sprite indicating it is plantable
 		draw_sprite(global.beanList[m_player_seed].sprite,1,x,y)
@@ -25,6 +25,7 @@ if(global.grid[m_player_xPos,m_player_yPos] == GRIDTILE.PLOTEMPTY)
 			draw_sprite(spr_unable, 0, x, y)
 		}
 	}
+	//ADD CASE FOR DIG BEAN11 TODO:
 }
 else if(global.grid[m_player_xPos,m_player_yPos] == GRIDTILE.PLOTFULL)
 {

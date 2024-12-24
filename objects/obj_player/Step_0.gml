@@ -36,19 +36,14 @@ y = TILE_SIZE*m_player_yPos;
 switch(global.grid[m_player_xPos,m_player_yPos])
 {
 	case GRIDTILE.SHOVEL:
-		if(m_player_currentState == 2) //if in dig mode, cant do anything else
-		{
-			m_player_selectActive = false;
-			break;
-		}
-		m_player_selectActive = true; //otherwise, able to select
+		m_player_selectActive = true; //able to select
 		//check for interaction
 		if(keyboard_check_pressed(global.controlMain))
 		{
-			//reset seed if a player had a selected seed already
-			m_player_seed = -1;
-			//change to "dig" mode
-			m_player_currentState = 2;
+			if(m_player_seed == -2) //deselect dig if dig selected
+				m_player_seed = -1;
+			else //set seed and state to "dig" mode
+				m_player_seed = -2;
 		}
 		break;
 	case GRIDTILE.SEED:
@@ -71,7 +66,6 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 				//resets active state if nothing found
 				m_player_selectActive = false;
 				_tempseed = -1;
-			//	m_player_selectID = -1;
 			}
 		}
 		//check for interaction
@@ -89,7 +83,7 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 		}
 		break;
 	case GRIDTILE.PLOTEMPTY:
-		if(m_player_seed != -1 && global.money >= global.beanList[m_player_seed].cost)//can plant
+		if(m_player_seed > -1 && global.money >= global.beanList[m_player_seed].cost)//can plant
 		{
 			m_player_selectActive = true;
 			//can plant

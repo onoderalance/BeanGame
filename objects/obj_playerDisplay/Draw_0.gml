@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//draw selected bean ------
-if(obj_player.m_player_seed != -1)
+//draw selected bean ------ 
+if(obj_player.m_player_seed > -1) //-1 and -2 (none and dig do not count)
 {
 	//draw bean "centered" at point of tile 7
 	draw_sprite(global.beanList[obj_player.m_player_seed].sprite, 0, 
@@ -12,9 +12,16 @@ if(obj_player.m_player_seed != -1)
 	//currently center to grid tiles 6, 1, with 2 pixel offest on x axis
 	draw_text_ext_color(TILE_SIZE*7, TILE_SIZE*1, global.beanList[obj_player.m_player_seed].name, 6, 30,
 		COLOR_1, COLOR_1, COLOR_1, COLOR_1, 1);
-	break;
+}
+else if(obj_player.m_player_seed == -2) //case for dig
+{
+	draw_set_halign(fa_center);
+	draw_set_font(fnt_beanSmall);
+	//currently center to grid tiles 6, 1, with 2 pixel offest on x axis
+	draw_text_ext_color(TILE_SIZE*7, TILE_SIZE*1, "DIG", 6, 30,
+		COLOR_1, COLOR_1, COLOR_1, COLOR_1, 1);
 }
 
 //otherwise, draw other pertinent information
-if(obj_player.m_player_currentState == 2) //draw 
+//if(obj_player.m_player_currentState == 2) //draw 
 	
