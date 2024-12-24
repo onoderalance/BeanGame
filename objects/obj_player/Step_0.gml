@@ -6,38 +6,58 @@ if(keyboard_check_pressed(global.controlUp) && m_player_yPos != 0)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_yPos--;
+	//show_debug_message(global.grid[m_player_xPos,m_player_yPos]);
 }
 else if(keyboard_check_pressed(global.controlLeft) && m_player_xPos != 0)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);	
 	m_player_xPos--;
+	//show_debug_message(global.grid[m_player_xPos,m_player_yPos]);
 }
 else if(keyboard_check_pressed(global.controlDown) && m_player_yPos != GRID_WIDTH)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_yPos++;
+	//show_debug_message(global.grid[m_player_xPos,m_player_yPos]);
 }
 else if(keyboard_check_pressed(global.controlRight) && m_player_xPos != GRID_HEIGHT)
 {
 	audio_play_sound(snd_move, 0, false, 1, 0, 1);
 	m_player_xPos++;
+	//show_debug_message(global.grid[m_player_xPos,m_player_yPos]);
 }
 
 //centers player to position according to positional coordinates
 x = TILE_SIZE*m_player_xPos;
 y = TILE_SIZE*m_player_yPos;
 
-//handles behavior checking
-
+//handles behavior checking 
 //determines player behaviour based on the segment of the screen we are in
 switch(global.grid[m_player_xPos,m_player_yPos])
 {
+	case GRIDTILE.SHOVEL:
+		if(m_player_currentState == 2) //if in dig mode, cant do anything else
+		{
+			m_player_selectActive = false;
+			break;
+		}
+		m_player_selectActive = true; //otherwise, able to select
+		//check for interaction
+		if(keyboard_check_pressed(global.controlMain))
+		{
+			//reset seed if a player had a selected seed already
+			m_player_seed = -1;
+			//change to "dig" mode
+			m_player_currentState = 2;
+		}
+		break;
 	case GRIDTILE.SEED:
 		//handles seed checking
 		//gets seed hovered by the player
 		var _tempseed = -1; //stores index of seed hovered by the player
 		for(var i = 0; i < global.beanCount; i++)
 		{
+			//check if there is a valid bean in slot
 			if(m_player_xPos == global.beanList[i].seedX && m_player_yPos == global.beanList[i].seedY)
 			{
 				m_player_selectActive = true;
@@ -63,7 +83,7 @@ switch(global.grid[m_player_xPos,m_player_yPos])
 				//if same seed has been chosen, deselect current seed
 				if(_tempseed == m_player_seed)
 					m_player_seed = -1;
-				else //otherwise, set seed to new seed
+				else //otherwise, set seed to the new seed
 					m_player_seed = _tempseed;
 			}
 		}
