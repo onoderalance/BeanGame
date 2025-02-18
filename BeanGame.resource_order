@@ -32,6 +32,8 @@
     {"name":"scr_grid","order":1,"path":"scripts/scr_grid/scr_grid.yy",},
     {"name":"scr_projectileGen","order":2,"path":"scripts/scr_projectileGen/scr_projectileGen.yy",},
     {"name":"sh_palette","order":2,"path":"shaders/sh_palette/sh_palette.yy",},
+    {"name":"snd_money","order":1,"path":"sounds/snd_money/snd_money.yy",},
+    {"name":"snd_shot","order":2,"path":"sounds/snd_shot/snd_shot.yy",},
     {"name":"spr_background","order":1,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_bean_green","order":8,"path":"sprites/spr_bean_green/spr_bean_green.yy",},
     {"name":"spr_bean_lima","order":3,"path":"sprites/spr_bean_lima/spr_bean_lima.yy",},
