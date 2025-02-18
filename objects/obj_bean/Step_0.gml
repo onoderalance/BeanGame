@@ -10,10 +10,12 @@ if(m_bean_timeToShot <= 0)
 	//case for money bean
 	if(_currBean.shortName == "money")
 	{
+		audio_play_sound(snd_money, 0, false);
 		global.money += _currBean.cost;
 	}
 	else //case for other beans, shoot a projectile
 	{
+		audio_play_sound(snd_shot, 0, false);
 		scr_projectileGen(x, y, _currBean.proSprite, _currBean.velocity, _currBean.damage)
 	}
 	//reset shot clock
