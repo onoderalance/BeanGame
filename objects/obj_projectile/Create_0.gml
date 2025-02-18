@@ -3,8 +3,6 @@
 
 //how many pixels it will move per second
 m_proVel = -1;
-//how many pixels it will move in one step
-//m_rat_stepSize = 1;
 
 //damage it will do
 m_proDamage = -1;
