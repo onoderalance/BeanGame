@@ -52,6 +52,9 @@ global.beanList = array_create(NUM_BEANS);
 //keep track of how many kinds of beans have been generated
 global.beanCount = 0;
 
+//keeps track of time of day, 0-99
+global.time = 0;
+
 //generate beans
 scr_bean_generateBeans();
 

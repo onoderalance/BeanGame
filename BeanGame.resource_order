@@ -26,6 +26,7 @@
     {"name":"obj_playerDisplay","order":2,"path":"objects/obj_playerDisplay/obj_playerDisplay.yy",},
     {"name":"obj_projectile","order":8,"path":"objects/obj_projectile/obj_projectile.yy",},
     {"name":"obj_rat","order":1,"path":"objects/obj_rat/obj_rat.yy",},
+    {"name":"obj_timeDisplay","order":3,"path":"objects/obj_timeDisplay/obj_timeDisplay.yy",},
     {"name":"obj_title","order":6,"path":"objects/obj_title/obj_title.yy",},
     {"name":"rm_title","order":1,"path":"rooms/rm_title/rm_title.yy",},
     {"name":"scr_grid","order":1,"path":"scripts/scr_grid/scr_grid.yy",},
@@ -40,6 +41,7 @@
     {"name":"spr_palette","order":7,"path":"sprites/spr_palette/spr_palette.yy",},
     {"name":"spr_projectile","order":11,"path":"sprites/spr_projectile/spr_projectile.yy",},
     {"name":"spr_rat","order":6,"path":"sprites/spr_rat/spr_rat.yy",},
+    {"name":"spr_timeStrip","order":13,"path":"sprites/spr_timeStrip/spr_timeStrip.yy",},
     {"name":"spr_unable","order":10,"path":"sprites/spr_unable/spr_unable.yy",},
   ],
 }
