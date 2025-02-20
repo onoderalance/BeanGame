@@ -6,3 +6,12 @@ function scr_startLevel(level)
 {
 	global.time = 0;
 }
+
+//call from level manager to spawn new enemy
+function scr_spawnEnemy(enemy, xOffset, yOffset)
+{
+	if(enemy == "rat")
+	{
+		instance_create_depth(160 + xOffset*16, 32 + yOffset*16, depth, obj_rat);
+	}
+}

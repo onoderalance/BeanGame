@@ -14,3 +14,11 @@ else
 		global.time += 1;
 	}
 }
+
+//HARDCODED RN FOR TESTING PURPOSES
+if(global.time = 20 && currTick == 1)
+{
+	scr_spawnEnemy("rat", 1, 2);
+	scr_spawnEnemy("rat", 0, 1);
+	scr_spawnEnemy("rat", 3, 0);
+}
