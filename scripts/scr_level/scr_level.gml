@@ -20,12 +20,32 @@ function scr_startLevel(level)
 //call form level manager to determine what needs to spawn at this time
 function scr_spawnAtTime(time)
 {
+	//variables to ensure that rats dont spawn over eachother
+	var spawnGrid = ds_grid_create(3, 5);
+	ds_grid_clear(spawnGrid, false);
+	
 	//if not a null num of enemys to spawn
 	for(var i = 0; i < enemyArray[time]; i++)
 	{
 		//spawns with random offsets
-		//TODO: MAKE SURE THEY CANNOT OVERLAP
-		scr_spawnEnemy("rat", irandom_range(0, 2), irandom_range(0, 4));
+		var newx, newy;
+        var attempts = 0; // counter for attempts to find a valid position
+        do {
+            newx = irandom_range(0, 2); 
+            newy = irandom_range(0, 4); 
+            attempts++;
+        } until (!ds_grid_get(spawnGrid, newx, newy) || attempts >= 100); 
+
+        // If a valid position was found, spawn new rat
+        if (attempts < 100) 
+		{
+            scr_spawnEnemy("rat", newx, newy);
+            spawnGrid[# newx, newy] = true; // Mark as filled in the grid
+        }
+        else 
+		{
+            show_debug_message("no valid spawn in 100 attempts");
+        }
 	}
 }
 
