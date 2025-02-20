@@ -43,6 +43,7 @@
     {"name":"spr_palette","order":7,"path":"sprites/spr_palette/spr_palette.yy",},
     {"name":"spr_projectile","order":11,"path":"sprites/spr_projectile/spr_projectile.yy",},
     {"name":"spr_rat","order":6,"path":"sprites/spr_rat/spr_rat.yy",},
+    {"name":"spr_timeFlag","order":14,"path":"sprites/spr_timeFlag/spr_timeFlag.yy",},
     {"name":"spr_timeStrip","order":13,"path":"sprites/spr_timeStrip/spr_timeStrip.yy",},
     {"name":"spr_unable","order":10,"path":"sprites/spr_unable/spr_unable.yy",},
   ],

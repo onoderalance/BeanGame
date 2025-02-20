@@ -67,6 +67,7 @@
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
     {"id":{"name":"spr_projectile","path":"sprites/spr_projectile/spr_projectile.yy",},},
     {"id":{"name":"spr_rat","path":"sprites/spr_rat/spr_rat.yy",},},
+    {"id":{"name":"spr_timeFlag","path":"sprites/spr_timeFlag/spr_timeFlag.yy",},},
     {"id":{"name":"spr_timeStrip","path":"sprites/spr_timeStrip/spr_timeStrip.yy",},},
     {"id":{"name":"spr_unable","path":"sprites/spr_unable/spr_unable.yy",},},
   ],
