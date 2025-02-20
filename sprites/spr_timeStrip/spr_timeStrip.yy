@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_timeStrip",
   "bboxMode":0,
-  "bbox_bottom":28,
+  "bbox_bottom":26,
   "bbox_left":11,
   "bbox_right":115,
   "bbox_top":11,
