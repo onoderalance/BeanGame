@@ -15,10 +15,8 @@ else
 	}
 }
 
-//HARDCODED RN FOR TESTING PURPOSES
-if(global.time = 20 && currTick == 1)
+//at the start of a tick, check for spawns
+if(currTick == 1)
 {
-	scr_spawnEnemy("rat", 1, 2);
-	scr_spawnEnemy("rat", 0, 1);
-	scr_spawnEnemy("rat", 3, 0);
+	scr_spawnAtTime(global.time);
 }
