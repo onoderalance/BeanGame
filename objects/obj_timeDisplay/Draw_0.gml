@@ -5,4 +5,4 @@
 draw_sprite(spr_timeStrip, 0, x, y);
 
 //draw timer flag with added offsets
-draw_sprite(spr_timeFlag, 0, x+4, y+2);
+draw_sprite(spr_timeFlag, 0, x+4+timerOffset, y+2);
