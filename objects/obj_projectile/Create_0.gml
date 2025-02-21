@@ -31,7 +31,7 @@ moveX = function(amount)
             else
             {
                 // Hit a solid!
-                show_debug_message("proj dead");
+                //show_debug_message("proj dead");
 				//check collision type
 				if(_inst.object_index == obj_rat)
 					_inst.m_rat_health -= m_proDamage;

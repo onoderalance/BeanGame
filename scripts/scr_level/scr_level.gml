@@ -4,7 +4,11 @@
 //call from levelManager to start a new level
 function scr_startLevel(level)
 {
+	//reset health to max
+	global.health = 5;
+	//reset time to 0
 	global.time = 0;
+	//empty enemyarray to repopulate
 	for(var i = 0; i < 100; i++)
 	{
 		enemyArray[i] = 0;
@@ -54,7 +58,8 @@ function scr_spawnEnemy(enemy, xOffset, yOffset)
 {
 	if(enemy == "rat")
 	{
-		instance_create_depth(160 + xOffset*16, 32 + yOffset*16, depth, obj_rat);
+		var newRat = instance_create_depth(160 + xOffset*16, 32 + yOffset*16, depth, obj_rat);
+		newRat.m_rat_lane = yOffset; //store the lane of this rat
 	}
 }
 

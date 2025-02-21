@@ -9,3 +9,6 @@ m_rat_stepSize = 1;
 
 //how much health the rat has
 m_rat_health = 5;
+
+//tracks which lane the rat spawned in 0-4
+m_rat_lane = 0;

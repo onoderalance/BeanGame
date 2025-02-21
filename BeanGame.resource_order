@@ -22,6 +22,7 @@
     {"name":"obj_bean","order":3,"path":"objects/obj_bean/obj_bean.yy",},
     {"name":"obj_collision","order":9,"path":"objects/obj_collision/obj_collision.yy",},
     {"name":"obj_gameManager","order":2,"path":"objects/obj_gameManager/obj_gameManager.yy",},
+    {"name":"obj_home","order":13,"path":"objects/obj_home/obj_home.yy",},
     {"name":"obj_levelManager","order":12,"path":"objects/obj_levelManager/obj_levelManager.yy",},
     {"name":"obj_moneyDisplay","order":1,"path":"objects/obj_moneyDisplay/obj_moneyDisplay.yy",},
     {"name":"obj_playerDisplay","order":2,"path":"objects/obj_playerDisplay/obj_playerDisplay.yy",},
